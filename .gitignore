@@ -1,0 +1,30 @@
+vendor
+node_modules
+.history
+.vscode
+dev
+build
+prod
+dist
+logs
+web-build
+
+# API
+mybooksApi/config/settings.php
+mybooksApi/config/env.php
+mybooksApi/prod
+mybooksApi/logs
+mybooksApi/dev
+mybooksApi/.git
+
+.expo/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# macOS
+.DS_Store
