@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+/*********************************/
+
+
+.BooksTable th, .BooksTable td {
+  text-align: left;
+  padding-right: 15px;
+}
