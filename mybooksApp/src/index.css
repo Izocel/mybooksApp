@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/*************************************/
+.titreTable {
+  padding-left: 0.25rem;
+  border:solid;
+  border-width: 1.5px;
+  border-color: white;
+
+  background-color: rgb(255, 102, 0);
+  text-align: left;
+}
+
+.titreTable h1 {
+  margin-bottom: 2px;
+}
+
+.table th {
+  text-decoration: underline;
+}
+
+.table th, .table td {
+    text-align: left;
+    padding-right: 15px;
+  }
