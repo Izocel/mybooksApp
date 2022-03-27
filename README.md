@@ -96,3 +96,5 @@ Pour la création d'un usager, ajouter dans le body de la requête l'information
     "email" : "[email]"
 }
 ```
+
+REACT-ICON: https://react-icons.github.io/react-icons/

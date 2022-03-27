@@ -1,5 +1,6 @@
 import React, { } from 'react';
 import IList from '../interfaces/IList';
+import TableRow from './TableRow';
 
 
 const Table: React.FC<IList> = ({ prepend, titre, style, data, append }) => {
@@ -15,30 +16,37 @@ const Table: React.FC<IList> = ({ prepend, titre, style, data, append }) => {
   };
 
   const getHeaders = (): JSX.Element => {
+
+    //const appendCol = (data?[0]).
+
     return (
       <thead>
         <tr>
+          <th><span></span></th>
           <th>id</th>
           <th>Titre</th>
+          <th><span></span></th>
         </tr>
       </thead>
     );
   };
 
-  const getRows = (): JSX.Element => 
-    data?.map((item: any) => {
-    return (
-      <tr key={item.id}>
-        <td>{item.id}</td>
-        <td>{item.titre}</td>
-      </tr>
-    );
-  });
+  const getRows = (): JSX.Element[] | undefined =>
+    data?.map((rowData: any) => {
+      return (
+        <TableRow 
+        prepend={rowData.prepend}
+        key={rowData.key ?? rowData.itemData.id} 
+        itemData={rowData.itemData}
+        append={rowData.append}
+        ></TableRow>
+      );
+    });
 
 
   const renderAll = (): JSX.Element => {
     return (
-      <table className={style??defaultStyle}>
+      <table className={style ?? defaultStyle}>
         {getHeaders()}
         <tbody>
           {getRows()}

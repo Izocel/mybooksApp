@@ -1,7 +1,8 @@
 interface IRowData {
+    key?: string
     style?: string
     prepend?: JSX.Element
-    data?: any;
+    itemData?: any;
     append?: JSX.Element
   }
   export default IRowData;

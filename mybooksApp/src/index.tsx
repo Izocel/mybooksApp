@@ -1,8 +1,9 @@
 // Styles
-import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
+
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
-import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import './custom.scss';
 
 

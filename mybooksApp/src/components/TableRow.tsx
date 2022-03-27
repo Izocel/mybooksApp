@@ -2,26 +2,27 @@ import React, { } from 'react';
 import IRowData from '../interfaces/IRowData';
 
 
-const TableRow: React.FC<IRowData> = ({ prepend, style, data, append }) => {
+const TableRow: React.FC<IRowData> = ({prepend, style, itemData, append },key) => {
 
-    const getElements = () => {
+    const getElements = ():JSX.Element[] => {
         let elements: JSX.Element[] = [];
-        for (const key in data) {
-            if (Object.prototype.hasOwnProperty.call(data, key)) {
-                elements.push(<td>data[key]</td>);
+        let count:number = 0;
+        for (const field in itemData) {
+            if (Object.prototype.hasOwnProperty.call(itemData, field)) {
+                const value = itemData[field];
+                elements.push(<td key={count++}>{value}</td>);
             }
         }
         return elements;
     }
-
-    const render = (): JSX.Element => {
-        return (
-            <tr className={style}>
-                {prepend} {getElements()} {append}
-            </tr>
-        );
-    }
-    return render();
+    
+    return (
+        <tr key={key} className={style}>
+            <td>{prepend}</td>
+            {getElements()}
+            <td>{append}</td>
+        </tr>
+    );
 }
 
 export default TableRow;

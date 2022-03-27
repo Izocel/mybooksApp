@@ -1,8 +1,10 @@
+import IRowData from "./IRowData";
+
 interface IList {
   prepend?:JSX.Element
   titre?:JSX.Element | string
   style?: string
-  data?: any;
+  data?: IRowData[];
   append?:JSX.Element
 }
 
